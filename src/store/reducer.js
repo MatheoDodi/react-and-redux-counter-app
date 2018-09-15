@@ -14,7 +14,7 @@ const reducer = (state = initialState, action) => {
         case 'SUB':
             return {  ...state, counter: state.counter - action.value }
         case 'STORE_RESULT':
-            return { ...state, results: state.results.concat(state.counter) }
+            return { ...state, results: state.results.concat({val : state.counter, id: new Date()}) }
         default:
         return state;
         break;
